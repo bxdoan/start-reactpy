@@ -160,9 +160,12 @@ def main():
     """Create the app."""
     return html.div(
         html.h1("Photo Gallery"),
-        photo("Landscape", image_id=830),
-        photo("City", image_id=274),
-        photo("Puppy", image_id=237),
+        html.div(
+            html.div(photo("Landscape", image_id=830)),
+            html.div(photo("City", image_id=274)),
+            html.div(photo("Puppy", image_id=237)),
+            html.div(photo("Puppy", image_id=238)),
+        ),
         print_button("Play", "Playing"),
         todo_list(),
         gallery(),
